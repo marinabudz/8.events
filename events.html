@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <button id="button1">click</button>
+    <input type="number" id="number1" placeholder="Number..." />
+    <input type="number" id="number2" placeholder="Number..." />
+    <button id="calcTotalSum" onclick="getInputValue()">
+      calculate total sum
+    </button>
+    <input
+      type="text"
+      value="try to change text"
+      onchange="changeFunction(this.value)"
+    />
+    <form onsubmit="submitFunction()">
+      <div id="user">
+        Your name <input type="text" /> Your surname <input type="text" />
+      </div>
+    </form>
+
+    <script>
+      //say hello
+      let buttonEvent = () => alert("hello");
+      document.getElementById("button1").onclick = buttonEvent;
+      //calc sum
+
+      function getInputValue() {
+        let first = document.getElementById("number1").value;
+        let second = document.getElementById("number2").value;
+        let sum = Number(first) + Number(second);
+        alert(sum);
+      }
+
+      let changeFunction = value => {
+        alert("I see you");
+      };
+      let submitFunction = () => {};
+    </script>
+    <script src="events.js"></script>
+  </body>
+</html>
