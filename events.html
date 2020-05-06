@@ -1,9 +1,90 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <style>
+      #inputValue {
+        display: none;
+        text-align: center;
+        width: 100%;
+      }
+      .modalWindow {
+        display: none;
+        z-index: 800;
+        position: fixed;
+        left: 0;
+        top: 0;
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-content {
+        width: 50%;
+        background-color: mistyrose;
+        border: 2px solid mediumvioletred;
+        margin: auto;
+        height: 200px;
+        margin-top: 10%;
+        padding-right: 10px;
+      }
+      .modal-close {
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        color: mediumvioletred;
+      }
+      .modal-close:hover {
+        color: black;
+      }
+      .modal-text {
+        padding-top: 50px;
+      }
+      .block {
+        text-align: center;
+        font-size: 25px;
+        margin-top: 150px;
+        border: 2px solid black;
+        color: black;
+        background-color: lightsalmon;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .block-spaces {
+        margin-top: 40px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <button id="button1">click</button>
+    <!-- HOMEWORK -->
+    <div class="block">
+      <span id="spanValue"> Очікую на ввід даних</span>
+      <input type="text" id="inputValue" value="" class="block-spaces" />
+      <div id="window" class="block-spaces"></div>
+      <input
+        type="text"
+        value="try to change text"
+        onchange="changeFunction(this.value)"
+        class="block-spaces"
+      />
+
+      <div class="modalWindow" id="modal">
+        <div class="modal-content">
+          <span class="modal-close">&times;</span>
+          <p class="modal-text">Hello! Nice to meet you !</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLASSWORK -->
+    <!-- <button id="button1">click</button>
     <input type="number" id="number1" placeholder="Number..." />
     <input type="number" id="number2" placeholder="Number..." />
     <button id="calcTotalSum" onclick="getInputValue()">
@@ -18,26 +99,7 @@
       <div id="user">
         Your name <input type="text" /> Your surname <input type="text" />
       </div>
-    </form>
-
-    <script>
-      //say hello
-      let buttonEvent = () => alert("hello");
-      document.getElementById("button1").onclick = buttonEvent;
-      //calc sum
-
-      function getInputValue() {
-        let first = document.getElementById("number1").value;
-        let second = document.getElementById("number2").value;
-        let sum = Number(first) + Number(second);
-        alert(sum);
-      }
-
-      let changeFunction = value => {
-        alert("I see you");
-      };
-      let submitFunction = () => {};
-    </script>
+    </form> -->
     <script src="events.js"></script>
   </body>
 </html>
